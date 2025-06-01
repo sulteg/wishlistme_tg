@@ -1,0 +1,14 @@
+# Python виртуальное окружение
+bot/venv
+bot/__pycache__
+bot/*.pyc
+
+# Node modules
+webapp/node_modules
+
+# SQLite-файл
+webapp/db/wishlist.db
+
+# Локальные переменные окружения
+bot/.env
+webapp/.env

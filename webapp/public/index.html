@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wishlist MiniApp</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Подключаем Telegram Web App JS -->
+  <script
+    async
+    src="https://telegram.org/js/telegram-web-app.js"
+  ></script>
+</head>
+<body>
+  <!-- Основной контейнер -->
+  <div id="app">
+    <header>
+      <h1>🎁 Мои вишлисты</h1>
+      <button id="btnNewList">➕ Создать новый вишлист</button>
+      <button id="btnGallery">📚 Шаблоны</button>
+    </header>
+
+    <main>
+      <!-- Список существующих вишлистов -->
+      <section id="my-lists-section">
+        <h2>Ваши вишлисты</h2>
+        <ul id="my-lists-list"></ul>
+      </section>
+
+      <!-- Форма создания/редактирования вишлиста -->
+      <section id="wishlist-editor" class="hidden">
+        <button id="btnBackToLists">← Все списки</button>
+        <h2 id="editor-title">Редактировать вишлист</h2>
+        <div class="field">
+          <label>Название:</label>
+          <input type="text" id="wl-name" placeholder="Название вишлиста" />
+        </div>
+        <div class="field">
+          <label>Фон (URL картинки):</label>
+          <input type="text" id="wl-bg-url" placeholder="https://..." />
+        </div>
+        <button id="btnSaveList">Сохранить вишлист</button>
+
+        <h3>Товары в вишлисте</h3>
+        <table id="items-table">
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Название</th>
+              <th>Цена</th>
+              <th>Рейтинг</th>
+              <th>Комментарий</th>
+              <th>Взял?</th>
+              <th>Ссылка</th>
+              <th>⚙️</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <h3>Добавить товар вручную</h3>
+        <div class="field">
+          <label>Название товара:</label>
+          <input type="text" id="item-name" placeholder="Например, Гарнитура XYZ" />
+        </div>
+        <div class="field">
+          <label>Цена:</label>
+          <input type="text" id="item-price" placeholder="Например, 2999 ₽" />
+        </div>
+        <div class="field">
+          <label>Ссылка:</label>
+          <input type="text" id="item-url" placeholder="https://example.com" />
+        </div>
+        <button id="btnAddItem">➕ Добавить товар</button>
+      </section>
+
+      <!-- Раздел шаблонов -->
+      <section id="templates-section" class="hidden">
+        <button id="btnBackFromTemplates">← Назад к спискам</button>
+        <h2>Шаблоны вишлистов</h2>
+        <ul id="templates-list"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+/* public/styles.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+}
+
+#app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+header button {
+  background-color: #0088cc;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+header button:hover {
+  background-color: #006699;
+}
+
+.hidden {
+  display: none;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#my-lists-list,
+#templates-list {
+  list-style: none;
+  padding: 0;
+}
+
+#my-lists-list li,
+#templates-list li {
+  background: white;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#my-lists-list li:hover,
+#templates-list li:hover {
+  background-color: #f0f0f0;
+}
+
+#my-lists-list li span,
+#templates-list li span {
+  flex: 1;
+}
+
+#my-lists-list li button,
+#templates-list li button {
+  background-color: #28a745;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#my-lists-list li button:hover,
+#templates-list li button:hover {
+  background-color: #218838;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.field input {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+button#btnSaveList,
+button#btnAddItem,
+button#btnCopyTemplate {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button#btnBackToLists,
+button#btnBackFromTemplates {
+  background-color: #6c757d;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+button#btnBackToLists:hover,
+button#btnBackFromTemplates:hover {
+  background-color: #5a6268;
+}
+
+button#btnSaveList:hover,
+button#btnAddItem:hover,
+button#btnCopyTemplate:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
